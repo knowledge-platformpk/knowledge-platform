@@ -48,8 +48,10 @@ from dotenv import load_dotenv
 from src.map import display_map
 import os
 from ee import data
+from google.auth import default
 
-# Initialize the Earth Engine module.
+credentials, _ = default(scopes=['https://www.googleapis.com/auth/cloud-platform'])
+
 ee.Initialize()
 
 # Function to get basins and sub-basins.
