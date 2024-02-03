@@ -48,11 +48,9 @@ from dotenv import load_dotenv
 from src.map import display_map
 import os
 from ee import data
-load_dotenv()
 
-private_key = os.environ["PRIVATE_KEY"]
-client_email = os.environ["CLIENT_EMAIL"]
 # Initialize the Earth Engine module.
+ee.Authenticate()
 ee.Initialize()
 
 # Function to get basins and sub-basins.
