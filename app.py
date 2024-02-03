@@ -47,14 +47,18 @@ from src.roi.lst_roi import get_lst_image_roi, create_lst_timeseries_roi
 from dotenv import load_dotenv
 from src.map import display_map
 import os
-
+from ee import data
 load_dotenv()
 
 private_key = os.environ["PRIVATE_KEY"]
 client_email = os.environ["CLIENT_EMAIL"]
 
+credentials = data.EarthEngineCredentials(
+    private_key=private_key,
+    client_email=client_email
+)
 # Initialize the Earth Engine module.
-ee.Initialize(credentials={'private_key': private_key, 'client_email': client_email, 'quota_project_id': "ee-mspkafg"})
+ee.Initialize(credentials=credentials)
 
 # Function to get basins and sub-basins.
 def get_basins():
