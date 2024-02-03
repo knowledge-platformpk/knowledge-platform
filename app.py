@@ -44,12 +44,17 @@ from src.roi.srtm_roi import get_srtm_image_roi
 from src.roi.transpiration_roi import get_transpiration_image_roi, create_transpiration_timeseries_roi
 from src.roi.windspeed_roi import get_windspeed_image_roi, create_windspeed_timeseries_roi
 from src.roi.lst_roi import get_lst_image_roi, create_lst_timeseries_roi
-
-
+from dotenv import load_dotenv
 from src.map import display_map
+import os
+
+load_dotenv()
+
+private_key = os.environ["PRIVATE_KEY"]
+client_email = os.environ["CLIENT_EMAIL"]
 
 # Initialize the Earth Engine module.
-ee.Initialize()
+ee.Initialize(credentials={'private_key': private_key, 'client_email': client_email})
 
 # Function to get basins and sub-basins.
 def get_basins():
