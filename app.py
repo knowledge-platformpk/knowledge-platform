@@ -53,12 +53,9 @@ load_dotenv()
 private_key = os.environ["PRIVATE_KEY"]
 client_email = os.environ["CLIENT_EMAIL"]
 
-credentials = data.EarthEngineCredentials(
-    private_key=private_key,
-    client_email=client_email
-)
+ee.Authenticate()
 # Initialize the Earth Engine module.
-ee.Initialize(credentials=credentials)
+ee.Initialize()
 
 # Function to get basins and sub-basins.
 def get_basins():
