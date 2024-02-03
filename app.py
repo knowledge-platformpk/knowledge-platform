@@ -52,8 +52,6 @@ load_dotenv()
 
 private_key = os.environ["PRIVATE_KEY"]
 client_email = os.environ["CLIENT_EMAIL"]
-
-ee.Authenticate()
 # Initialize the Earth Engine module.
 ee.Initialize()
 
