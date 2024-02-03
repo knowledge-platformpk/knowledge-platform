@@ -50,7 +50,6 @@ import os
 from ee import data
 
 # Initialize the Earth Engine module.
-ee.Authenticate()
 ee.Initialize()
 
 # Function to get basins and sub-basins.
