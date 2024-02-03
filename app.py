@@ -48,11 +48,8 @@ from dotenv import load_dotenv
 from src.map import display_map
 import os
 from ee import data
-from google.auth import default
 
-credentials, _ = default(scopes=['https://www.googleapis.com/auth/cloud-platform'])
-
-ee.Initialize()
+ee.Initialize(project='ee-mspkafg')
 
 # Function to get basins and sub-basins.
 def get_basins():
