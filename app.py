@@ -54,7 +54,7 @@ private_key = os.environ["PRIVATE_KEY"]
 client_email = os.environ["CLIENT_EMAIL"]
 
 # Initialize the Earth Engine module.
-ee.Initialize(credentials={'private_key': private_key, 'client_email': client_email})
+ee.Initialize(project="ee-mspkafg", credentials={'private_key': private_key, 'client_email': client_email})
 
 # Function to get basins and sub-basins.
 def get_basins():
