@@ -49,6 +49,7 @@ from src.map import display_map
 import os
 from ee import data
 
+data.authenticateViaOauth('108282796642952869970')
 ee.Initialize(project='ee-mspkafg')
 
 # Function to get basins and sub-basins.
@@ -596,7 +597,7 @@ def main():
                 selected_sub_basin = st.selectbox("Select Sub-Basin", get_sub_basins(selected_basin), key='selected_sub_basin')
                 from_date = st.date_input("From Date", datetime.today(), key='from_date')
                 to_date = st.date_input("To Date", datetime.today(), key='to_date')
-                selected_index = st.selectbox("Select Index", ['None', 'Air Temperature','Enhanced Vegetation Index (EVI)','Evapotranspiration ET',"Keetch-Byram Drought Index","Land Cover (2020)","Land Surface Temperature","Latent Heat Flux (LE)","Leaf Area Index","NDVI","Population","Potential Evapotranspiration (PET)","Precipitation","Snow Cover","Soil Moisture","Soil Temperature","Soil Types","SRTM","Transpiration (TP)","Wind Speed"], key='selected_index')
+                selected_index = st.selectbox("Select Index", ['None', 'Air Temperature','Enhanced Vegetation Index (EVI)','Evapotranspiration (ET)',"Keetch-Byram Drought Index","Land Cover (2020)","Land Surface Temperature","Latent Heat Flux (LE)","Leaf Area Index","NDVI","Population","Potential Evapotranspiration (PET)","Precipitation","Snow Cover","Soil Moisture","Soil Temperature","Soil Types","SRTM","Transpiration (TP)","Wind Speed"], key='selected_index')
 
                 execute_col, download_col = st.columns([1,1], gap="small")
             with execute_col:
