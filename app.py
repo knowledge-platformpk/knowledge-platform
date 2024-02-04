@@ -49,8 +49,12 @@ from src.map import display_map
 import os
 from ee import data
 
+from google.oauth2 import service_account
 
-ee.Initialize()
+service_account = 'test-service@ee-mspkafg.iam.gserviceaccount.com'
+credentials = ee.ServiceAccountCredentials(service_account, '.google-credentials.json')
+
+ee.Initialize(credentials=credentials)
 
 # Function to get basins and sub-basins.
 def get_basins():
