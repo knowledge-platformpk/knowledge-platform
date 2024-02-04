@@ -49,7 +49,7 @@ from src.map import display_map
 import os
 from ee import data
 
-data.authenticateViaOauth('108282796642952869970')
+
 ee.Initialize(project='ee-mspkafg')
 
 # Function to get basins and sub-basins.
