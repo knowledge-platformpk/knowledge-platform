@@ -52,7 +52,7 @@ from ee import data
 from google.oauth2 import service_account
 
 service_account = 'test-service@ee-mspkafg.iam.gserviceaccount.com'
-credentials = ee.ServiceAccountCredentials(service_account, '.google-credentials.json')
+credentials = ee.ServiceAccountCredentials(service_account, 'google-credentials.json')
 
 ee.Initialize(credentials=credentials)
 
