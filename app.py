@@ -50,7 +50,7 @@ import os
 from ee import data
 
 
-ee.Initialize(project='ee-mspkafg')
+ee.Initialize()
 
 # Function to get basins and sub-basins.
 def get_basins():
