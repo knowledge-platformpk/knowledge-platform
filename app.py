@@ -925,15 +925,10 @@ def main():
         # st.session_state.get('geojson_data')
     )
 
-    st.session_state['Map'] = Map
-
     Map.to_streamlit(height=600)
 
     if 'chart' in st.session_state and st.session_state['chart'] is not None:
         st.pyplot(st.session_state['chart'])
-
-    if st.button("execute"):        
-        print(st.session_state['Map'].user_roi)
 
 
 # Run the app
