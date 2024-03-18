@@ -200,7 +200,7 @@ def main():
 
     # Sidebar content
     with st.sidebar:
-        st.image('logo.png', width=300)
+        st.image('logo_transparent_HQ.png', width=300)
         cols = st.columns(3)
         
         with cols[0]:
