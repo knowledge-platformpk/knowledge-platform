@@ -894,9 +894,7 @@ def main():
                                 file_name="static_files.zip",
                                 key="download_button")
             st.markdown("""
-            <div id="sfc9exugmtzxfzsn1211myt1kqty11lfxmp"></div>
-            <script type="text/javascript" src="https://counter11.optistats.ovh/private/counter.js?c=9exugmtzxfzsn1211myt1kqty11lfxmp&down=async" async></script>
-            <noscript><a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a></noscript>
+           <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
             """, unsafe_allow_html=True)
             
     # Display the map in the main area
