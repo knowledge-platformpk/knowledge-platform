@@ -96,7 +96,6 @@ nav a {
     width: 100%;
     margin-bottom: 0.5em;
 }
-</style>
 """
 def navigation_bar():
     st.markdown(CSS, unsafe_allow_html=True)
