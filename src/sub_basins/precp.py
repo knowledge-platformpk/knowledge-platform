@@ -74,7 +74,7 @@ def create_Precp_timeseries(selected_sub_basin, from_date, to_date):
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size as needed
     df.plot(x='date', y='precipitation', ax=ax, legend=True, title='Precipitation Time Series')
     plt.xlabel('Date', fontsize=6)
-    plt.ylabel('Precipitation mm/day')
+    plt.ylabel('Precipitation (mm/day)')
     plt.grid(True)
     plt.tight_layout()
 
