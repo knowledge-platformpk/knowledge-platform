@@ -68,7 +68,7 @@ def create_lhf_timeseries_roi(json_data, from_date, to_date):
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size as needed
     df.plot(x='date', y='LE', ax=ax, legend=True, title='LE Time Series')
     plt.xlabel('Date', fontsize=6)
-    plt.ylabel('Mean Latent Heat Flux (LE)')
+    plt.ylabel('Mean Latent Heat Flux (LE) - J/m^2/day')
     plt.grid(True)
     plt.tight_layout()
 
