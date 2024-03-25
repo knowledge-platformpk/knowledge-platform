@@ -62,7 +62,7 @@ def create_lst_timeseries_roi(json_data, from_date, to_date):
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size as needed
     df.plot(x='date', y='LST_Day_1km', ax=ax, legend=True, title='LST (C) Time Series')
     plt.xlabel('Date', fontsize=6)
-    plt.ylabel('Mean LST')
+    plt.ylabel('Mean LST (C)')
     plt.grid(True)
     plt.tight_layout()
 
