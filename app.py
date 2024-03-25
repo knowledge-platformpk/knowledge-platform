@@ -73,7 +73,7 @@ def get_sub_basins(selected_basin):
 ###########################################
 
 # Set full width layout
-st.set_page_config(layout="centered", page_title="PakAfgApp2")
+st.set_page_config(layout="wide", page_title="Pak Afghan Shared Water Boundaries")
 
 def navigation_bar():
     st.markdown("""
@@ -84,14 +84,14 @@ def navigation_bar():
             justify-content: space-around;
             align-items: center;
             height: 50px;
-            background-color: #2a537c;
+            background-color: #2a537c; /* Background color */
             color: white;
             margin-top:-20px;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: white;
+            color: white; /* Link color set to white */
         }
         .sidebar .btn {
             display: block;
@@ -104,7 +104,6 @@ def navigation_bar():
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#docs">Documentation</a>
         </nav>
         """, unsafe_allow_html=True)
 
