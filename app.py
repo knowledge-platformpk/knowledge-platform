@@ -113,8 +113,8 @@ def navigation_bar():
 # Main app layout
 def main():
     # Navbar
-    # navigation_bar()
-    tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
+    navigation_bar()
+    # tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
 
     st.write("#")
     # Initialize session state variables (dual charts here or replace below below set to ndvi_chart)
