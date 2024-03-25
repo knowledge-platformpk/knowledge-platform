@@ -75,30 +75,63 @@ def get_sub_basins(selected_basin):
 # Set full width layout
 st.set_page_config(layout="wide", page_title="PakAfgApp2")
 
-CSS = """
-/* Navigation bar styles */
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    background-color: gray;
-    color: white;
-    margin-top:-20px;
-}
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-}
-.sidebar .btn {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.5em;
-}
-"""
+# CSS = """
+# /* Navigation bar styles */
+# nav {
+#     display: flex;
+#     justify-content: space-around;
+#     align-items: center;
+#     height: 50px;
+#     background-color: gray;
+#     color: white;
+#     margin-top:-20px;
+# }
+# nav a {
+#     margin: 0 15px;
+#     text-decoration: none;
+#     color: white;
+# }
+# .sidebar .btn {
+#     display: block;
+#     width: 100%;
+#     margin-bottom: 0.5em;
+# }
+# """
+# def navigation_bar():
+#     st.markdown(CSS, unsafe_allow_html=True)
+#     st.markdown("""
+#         <nav>
+#             <a href="#home">Home</a>
+#             <a href="#about">About</a>
+#             <a href="#docs">Documentation</a>
+#         </nav>
+#         """, unsafe_allow_html=True)
+
 def navigation_bar():
-    st.markdown(CSS, unsafe_allow_html=True)
+    st.markdown("""
+        <style>
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: gray;
+            color: white;
+            margin-top:-20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+        }
+        .sidebar .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 0.5em;
+        }
+        </style>
+        """, unsafe_allow_html=True)
     st.markdown("""
         <nav>
             <a href="#home">Home</a>
