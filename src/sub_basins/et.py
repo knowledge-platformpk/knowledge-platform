@@ -74,7 +74,7 @@ def create_et_timeseries(selected_sub_basin, from_date, to_date):
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size as needed
     df.plot(x='date', y='ET', ax=ax, legend=True, title='ET Time Series')
     plt.xlabel('Date', fontsize=6)
-    plt.ylabel('Mean Evapotranspiration (ET)')
+    plt.ylabel('Mean Evapotranspiration (ET) kg/m^2/8day')
     plt.grid(True)
     plt.tight_layout()
 
