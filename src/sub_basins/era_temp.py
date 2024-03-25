@@ -75,7 +75,7 @@ def create_temp_timeseries(selected_sub_basin, from_date, to_date):
     fig, ax = plt.subplots(figsize=(10, 6))  # Adjust the figure size as needed
     df.plot(x='date', y='temperature', ax=ax, legend=True, title='Temperature Time Series')
     plt.xlabel('Date', fontsize=6)
-    plt.ylabel('Mean Temperature')
+    plt.ylabel('Mean Temperature (C)')
     plt.grid(True)
     plt.tight_layout()
 
