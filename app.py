@@ -73,7 +73,7 @@ def get_sub_basins(selected_basin):
 ###########################################
 
 # Set full width layout
-st.set_page_config(layout="wide", page_title="PakAfgApp2")
+st.set_page_config(layout="centered", page_title="PakAfgApp2")
 
 def navigation_bar():
     st.markdown("""
@@ -229,8 +229,8 @@ def main():
                 st.session_state['get_all'] = None
                 st.session_state['show_checkboxes'] = None
                 
-        with cols[2]:
-            draw_aoi = st.button("Draw AOI")
+        # with cols[2]:
+            # draw_aoi = st.button("Draw AOI")
          # Display the file uploader if the upload section is visible
         
         if st.session_state.get('upload_section_visible', False):
