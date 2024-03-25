@@ -84,14 +84,15 @@ def navigation_bar():
             padding: 10px 0;
             text-align: center;
         }
+        
         nav a {
-            color: white; /* Default link color */
+            color: #FFFFFF; 
             text-decoration: none;
             margin: 0 20px;
             transition: color 0.3s; /* Transition effect for color change */
         }
         nav a:hover {
-            color: yellow; /* Link color on hover */
+            color: #FFFFFF; /* Link color on hover */
         }
     </style>
         """, unsafe_allow_html=True)
@@ -814,7 +815,7 @@ def main():
                         # Code to download the image
                         try:
                             if selected_index == 'SRTM':
-                                download_url = st.session_state['srtm_image'].clip(selected_sub_basin).getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
+                                download_url = st.session_state['srtm_image'].getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
                             elif selected_index == 'NDVI':
                                 download_url = st.session_state['ndvi_image'].getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
                             elif selected_index == 'Air Temperature':
