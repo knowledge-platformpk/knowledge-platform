@@ -231,7 +231,10 @@ def main():
         # with cols[2]:
             # draw_aoi = st.button("Draw AOI")
          # Display the file uploader if the upload section is visible
-        
+        st.markdown("""
+           <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
+            """, unsafe_allow_html=True)
+            
         if st.session_state.get('upload_section_visible', False):
             uploaded_file = st.file_uploader("Upload GeoJSON file", type=['geojson'], accept_multiple_files=False, key="geojson_upload")
             if uploaded_file is not None and uploaded_file.size <= 1_000_000:  # Check for file size (1 MB max)
@@ -893,9 +896,6 @@ def main():
                                 data=open(zip_file_path, 'rb').read(),
                                 file_name="static_files.zip",
                                 key="download_button")
-            st.markdown("""
-           <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
-            """, unsafe_allow_html=True)
             
     # Display the map in the main area
     Map = display_map(
