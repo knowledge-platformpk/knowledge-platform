@@ -77,28 +77,23 @@ st.set_page_config(layout="wide", page_title="Pak Afghan Shared Water Boundaries
 
 def navigation_bar():
     st.markdown("""
-        <style>
+         <style>
         /* Navigation bar styles */
         nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 50px;
             background-color: #2a537c; /* Background color */
-            color: white;
-            margin-top:-20px;
+            padding: 10px 0;
+            text-align: center;
         }
         nav a {
-            margin: 0 15px;
+            color: white; /* Default link color */
             text-decoration: none;
-            color: white; /* Link color set to white */
+            margin: 0 20px;
+            transition: color 0.3s; /* Transition effect for color change */
         }
-        .sidebar .btn {
-            display: block;
-            width: 100%;
-            margin-bottom: 0.5em;
+        nav a:hover {
+            color: yellow; /* Link color on hover */
         }
-        </style>
+    </style>
         """, unsafe_allow_html=True)
     st.markdown("""
         <nav>
@@ -231,9 +226,6 @@ def main():
         # with cols[2]:
             # draw_aoi = st.button("Draw AOI")
          # Display the file uploader if the upload section is visible
-        st.markdown("""
-           <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
-            """, unsafe_allow_html=True)
             
         if st.session_state.get('upload_section_visible', False):
             uploaded_file = st.file_uploader("Upload GeoJSON file", type=['geojson'], accept_multiple_files=False, key="geojson_upload")
@@ -822,7 +814,7 @@ def main():
                         # Code to download the image
                         try:
                             if selected_index == 'SRTM':
-                                download_url = st.session_state['srtm_image'].getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
+                                download_url = st.session_state['srtm_image'].clip(selected_sub_basin).getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
                             elif selected_index == 'NDVI':
                                 download_url = st.session_state['ndvi_image'].getDownloadURL({'scale': 90, 'dimensions': [2000,2000]})
                             elif selected_index == 'Air Temperature':
@@ -896,6 +888,10 @@ def main():
                                 data=open(zip_file_path, 'rb').read(),
                                 file_name="static_files.zip",
                                 key="download_button")
+            st.markdown("""
+           <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
+            """, unsafe_allow_html=True)
+        
             
     # Display the map in the main area
     Map = display_map(
