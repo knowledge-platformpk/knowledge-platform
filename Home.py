@@ -881,7 +881,7 @@ def main():
                 st.session_state['hydrometric_stations'] = st.checkbox('Hydrometric Stations')
 
             # Assuming your zip file is named "your_file.zip" and is in the project directory
-            zip_file_path = "static_files.zip"
+            zip_file_path = "shapefiles.rar"
 
             # Create a button to download the zip file
             if st.button("Download Shape Files"):
