@@ -884,10 +884,10 @@ def main():
             zip_file_path = "static_files.zip"
 
             # Create a button to download the zip file
-            if st.button("Get Static Files"):
+            if st.button("Download Shape Files"):
                 st.download_button(label="Click to Download",
                                 data=open(zip_file_path, 'rb').read(),
-                                file_name="static_files.zip",
+                                file_name="shapefiles.rar",
                                 key="download_button")
             st.markdown("""
            <a href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=9exugmtzxfzsn1211myt1kqty11lfxmp" border="0" title="free website counter" alt="free website counter"></a>
