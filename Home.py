@@ -108,7 +108,7 @@ def navigation_bar():
 # Main app layout
 def main():
     # Navbar
-    navigation_bar()
+    # navigation_bar()
     # tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
 
     st.write("#")
