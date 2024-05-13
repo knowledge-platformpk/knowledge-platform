@@ -99,7 +99,7 @@ def navigation_bar():
     st.markdown("""
         <nav>
             <a href="http://knowledge-platform.org">Home</a>
-            <a href="http://knowledge-platform.org/about">About</a>
+            <a href="/pages/about.py">About</a>
         </nav>
         """, unsafe_allow_html=True)
 
