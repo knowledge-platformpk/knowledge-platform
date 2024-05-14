@@ -108,10 +108,22 @@ def navigation_bar():
             </nav>
             """, unsafe_allow_html=True)
 
-
+st.markdown(
+    """
+    <script>
+        function aboutClicked() {
+            // Set session state to indicate that the About link is clicked
+            Streamlit.setComponentValue({ is_about_clicked: true });
+        }
+    </script>
+    """,
+    unsafe_allow_html=True
+)
 
 # Main app layout
 def main():
+    if 'is_about_clicked' not in st.session_state:
+        st.session_state.is_about_clicked = False
     # Navbar
     navigation_bar()
     # tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
