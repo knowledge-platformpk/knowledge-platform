@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 
-from about import about_page
 from src.sub_basins.ndvi import get_ndvi_image, create_ndvi_timeseries
 from src.sub_basins.era_temp import get_era_temp_image, create_temp_timeseries
 from src.sub_basins.evi import get_evi_image, create_evi_timeseries
@@ -97,33 +96,18 @@ def navigation_bar():
         }
     </style>
         """, unsafe_allow_html=True)
-
-    if st.session_state.is_about_clicked:
-        about_page()
-    else:
-        st.markdown("""
+    
+    st.markdown("""
             <nav>
                 <a href="http://knowledge-platform.org">Home</a>
-                <a href="#" onclick="aboutClicked()">About</a>
+                <a href="about.html">About</a>
             </nav>
             """, unsafe_allow_html=True)
 
-st.markdown(
-    """
-    <script>
-        function aboutClicked() {
-            // Set session state to indicate that the About link is clicked
-            Streamlit.setComponentValue({ is_about_clicked: true });
-        }
-    </script>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # Main app layout
 def main():
-    if 'is_about_clicked' not in st.session_state:
-        st.session_state.is_about_clicked = False
     # Navbar
     navigation_bar()
     # tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
