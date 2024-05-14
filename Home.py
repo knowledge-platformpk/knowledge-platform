@@ -99,7 +99,7 @@ def navigation_bar():
     st.markdown("""
         <nav>
             <a href="http://knowledge-platform.org">Home</a>
-            <a href="/pages/about.py">About</a>
+            <a href="about.py">About</a>
         </nav>
         """, unsafe_allow_html=True)
 
@@ -108,7 +108,7 @@ def navigation_bar():
 # Main app layout
 def main():
     # Navbar
-    # navigation_bar()
+    navigation_bar()
     # tab1, tab2, tab3 = st.tabs(["Home", "About", "Documentation"])
 
     st.write("#")
