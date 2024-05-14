@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import json
 
+from about import about_page
 from src.sub_basins.ndvi import get_ndvi_image, create_ndvi_timeseries
 from src.sub_basins.era_temp import get_era_temp_image, create_temp_timeseries
 from src.sub_basins.evi import get_evi_image, create_evi_timeseries
