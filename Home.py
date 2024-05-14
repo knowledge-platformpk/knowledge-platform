@@ -73,7 +73,7 @@ def get_sub_basins(selected_basin):
 ###########################################
 
 # Set full width layout
-st.set_page_config(layout="wide", page_title="Pak Afghan Shared Water Boundaries")
+st.set_page_config(layout="wide", page_title="Pak-Afghan Water Boundaries")
 
 def navigation_bar():
     st.markdown("""
