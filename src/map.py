@@ -170,6 +170,7 @@ def display_map(selected_index,selected_basin=None, selected_sub_basin=None, ndv
 
     # Add GeoJSON data to the map if available
     if geojson_data:
+        Map = geemap.Map(add_google_map=False)
         geojson_layer = ee.FeatureCollection(geojson_data)
         Map.centerObject(geojson_layer)
         Map.addLayer(geojson_layer.style(color='red',fillColor='#FFFFFF00'), {'min': min, 'max': max, 'pallete': ['yellow','orange','red']}, "Uploaded GeoJSON")
